@@ -42,9 +42,6 @@ export class Gamecontrol {
     }
     stopEvent():void{
         clearInterval(this.procID);
-        this.id_event=0;
-        this.arrEven=[];
-        this.arrOdd=[];
     }
 
 }
