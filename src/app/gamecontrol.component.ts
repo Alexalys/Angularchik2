@@ -5,11 +5,19 @@ import {EvenComponent} from "./even.component";
 @Component({
     selector: 'game-comp',
     template: `
-                <even-comp></even-comp>
-                <odd-comp></odd-comp>
                 <button (click)="callEvent()">Start game</button>
                 <button (click)="stopEvent()">Stop game</button>
-                <p>Компонент {{name}}</p>`
+                <p>Компонент {{name}}</p>
+                <even-comp></even-comp>
+                <odd-comp></odd-comp>
+                <table>
+                    <tr *ngFor="let item of arrOdd">
+                        <td>{{item.name}}</td> 
+                    </tr>
+                    <tr *ngFor="let item of arrEven">
+                        <td>{{item.name}}</td>
+                    </tr>
+                </table>`
 })
 export class Gamecontrol {
     id_event=0;
